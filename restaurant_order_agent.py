@@ -35,7 +35,6 @@ os.environ['LANGSMITH_PROJECT'] = 'Agent Chat UI Apps - Restaurant Order'
 # the menu is served by a tool instead of the system prompt; when the menu changes, only this tool changes
 @tool(
     'menu',
-    # parse_docstring=True,
     description=(
         'Provide the latest updated restaurant menu including main dishes, '
         'additional options, and beverages. '
@@ -44,20 +43,10 @@ os.environ['LANGSMITH_PROJECT'] = 'Agent Chat UI Apps - Restaurant Order'
     )
 )
 def menu() -> str:
-    """Provide the latest updated restaurant menu.
-    It returns the currently available main dishes, add-on options, and beverages with prices.
-
-    최신 업데이트된 식당 메뉴를 제공한다.
-    이 함수는 현재 판매 중인 메인 메뉴, 추가 옵션, 음료 목록과 가격 정보를 반환한다.
-
-    Returns:
-        str: A formatted string containing menu categories and prices.
-             메뉴 카테고리와 가격 정보를 포함한 형식화한 문자열
-    """
-    # NOTE: 이 코드는 하드코딩한 텍스트를 반환한다.
-    # 실제 서비스에서는 데이터베이스 또는 외부 API와 연결해 동적 메뉴를 조회하도록 확장할 수 있다.
-    # NOTE: This implementation returns hard-coded text.
-    # It can be extended to retrieve dynamic menu data from a database or external api.
+    # (note) 이 코드는 하드코딩한 텍스트를 반환한다.
+    #        실제 서비스에서는 데이터베이스 또는 외부 API와 연결해 동적 메뉴를 조회하도록 확장할 수 있다.
+    # (note) This implementation returns hard-coded text.
+    #        It can be extended to retrieve dynamic menu data from a database or external api.
     return '''
 [메인 메뉴]
 - 불고기 15,000원
