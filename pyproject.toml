@@ -1,0 +1,17 @@
+[project]
+name = "agent-chat-ui-restaurant-order"
+version = "0.1.0"
+description = "Korean restaurant order chatbot with a menu tool, served by a LangGraph server for Agent Chat UI"
+requires-python = ">=3.11"
+dependencies = [
+    "python-dotenv",
+    "langchain",
+    "langgraph",
+    "langgraph-cli[inmem]",
+    "langchain-openai",
+    "langchain-anthropic",
+    "langchain-google-genai"
+]
+
+[tool.uv]
+package = false

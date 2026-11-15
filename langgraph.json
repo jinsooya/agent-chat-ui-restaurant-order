@@ -1,0 +1,6 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./restaurant_order_agent.py:agent"
+  }
+}

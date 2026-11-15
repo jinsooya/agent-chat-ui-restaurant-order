@@ -1,0 +1,6 @@
+# 개인 API 키와 실행할 때 만들어지는 폴더는 저장소에 올리지 않는다.
+# keep personal API keys and run-time folders out of the repository
+.env
+.venv/
+.langgraph_api/
+__pycache__/
